@@ -1,0 +1,32 @@
+<div class="col-lg-5">
+  <div class="well bs-component">
+    <form #addReaderForm="ngForm" (ngSubmit)="saveReader(addReaderForm.value)" class="form-horizontal">
+      <fieldset>
+        <legend>Add Reader</legend>
+        <div class="form-group">
+          <label for="inputGoal" class="col-lg-3 control-label">Name</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputGoal" placeholder="Name" name="name" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputGoal" class="col-lg-3 control-label">Weekly Goal</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputGoal" placeholder="Weekly Goal" name="weeklyReadingGoal" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTotal" class="col-lg-3 control-label">Total Read</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputTotal" placeholder="Total Minutes Read" name="totalMinutesRead" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

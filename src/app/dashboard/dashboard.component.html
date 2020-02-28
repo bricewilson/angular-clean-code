@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">All Books</h3>
+        </div>
+        <div class="panel-body">
+        <li *ngFor='let book of allBooks'>
+          <i>{{book.title}}</i>
+          <a [routerLink]="['/editbook', book.bookID]"> Edit </a>
+          <a (click)="deleteBook(book.bookID)">Delete</a>
+        </li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">All Readers</h3>
+        </div>
+        <div class="panel-body">
+        <li *ngFor='let reader of allReaders'>
+          {{reader.name}}
+          <a [routerLink]="['/editreader', reader.readerID]">Edit</a>
+          <a (click)="deleteReader(reader.readerID)"> Delete </a>
+        </li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Most Popular Book</h3>
+        </div>
+        <div class="panel-body">
+          <i>{{mostPopularBook.title}}</i> by {{mostPopularBook.author}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

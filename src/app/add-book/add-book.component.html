@@ -1,0 +1,32 @@
+<div class="col-lg-5">
+  <div class="well bs-component">
+    <form #addBookForm="ngForm" (ngSubmit)="saveBook(addBookForm.value)" class="form-horizontal">
+      <fieldset>
+        <legend>Add New Book</legend>
+        <div class="form-group">
+          <label for="inputTitle" class="col-lg-3 control-label">Title</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputTitle" placeholder="Title" name="title" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAuthor" class="col-lg-3 control-label">Author</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputAuthor" placeholder="Author" name="author" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputYear" class="col-lg-3 control-label">Year</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputYear" placeholder="Year Published" name="publicationYear" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8 col-lg-offset-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

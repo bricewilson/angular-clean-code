@@ -1,0 +1,11 @@
+RxJS Lab
+
+	1. Add a new file to the "core" folder that will contain custom operators.
+	2. Export a new operator named "logEagerReaders" that will take a weekly reading goal (in minutes) as a parameter.
+	3. Open "data.service.ts" and update the call to "getAllReaders" so that it requests data from the server.
+	4. Open "dashboard.component.ts" and add a new property to store a Subscription object.
+	5. Add new code to "ngOnInit" to call "getAllReaders", apply the custom operator, subscribe to the result, and store the returned Subscription.
+  6. Implement OnDestroy and unsubscribe from the Subscription.
+	7. Build and run the app.
+	8. Open the app in a browser to make sure everything still works.
+  
