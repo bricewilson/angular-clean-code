@@ -24,9 +24,9 @@
     "tslib": "1.10.0",
     "zone.js": "0.10.2",
     "body-parser": "1.18.2",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "express": "4.17.1",
-    "morgan": "1.9.0",
+    "morgan": "1.9.1",
     "serve-favicon": "2.5.0"
   },
   "devDependencies": {
