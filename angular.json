@@ -119,6 +119,46 @@
           }
         }
       }
+    },
+    "book-library": {
+      "projectType": "library",
+      "root": "projects/book-library",
+      "sourceRoot": "projects/book-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/book-library/tsconfig.lib.json",
+            "project": "projects/book-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/book-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/book-library/src/test.ts",
+            "tsConfig": "projects/book-library/tsconfig.spec.json",
+            "karmaConfig": "projects/book-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/book-library/tsconfig.lib.json",
+              "projects/book-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "booktracker"
 }

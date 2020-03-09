@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { EditReaderComponent } from './edit-reader/edit-reader.component';
+import { BookLogComponent } from './book-log/book-log.component';
+import { BookLibraryModule } from 'book-library';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { EditReaderComponent } from './edit-reader/edit-reader.component';
     AddBookComponent,
     EditReaderComponent,
     EditBookComponent,
-    AddReaderComponent
+    AddReaderComponent,
+    BookLogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BookLibraryModule
   ],
   bootstrap: [AppComponent]
 })
