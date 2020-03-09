@@ -14,20 +14,12 @@ import { BookTrackerError } from 'src/app/models/bookTrackerError';
 })
 export class DashboardComponent implements OnInit {
 
-  deleteBook(bookID: number): void {
-    this.dataService.deleteBook(bookID)
-      .subscribe(
-        (data: void) => {
-          let index: number = this.allBooks.findIndex(book => book.bookID === bookID);
-          this.allBooks.splice(index, 1);
-        },
-        (err: any) => console.log(err)
-      );
-  }
+  allBooks: Book[];
+  allReaders: Reader[];
+  mostPopularBook: Book;
 
-  deleteReader(readerID: number): void {
-    console.warn(`Delete reader not yet implemented (readerID: ${readerID}).`);
-  }
+  constructor(private dataService: DataService,
+    private title: Title) { }
 
   ngOnInit() {
 
@@ -45,12 +37,20 @@ export class DashboardComponent implements OnInit {
 
     this.title.setTitle(`Book Tracker`);
   }
+  
+  deleteBook(bookID: number): void {
+    this.dataService.deleteBook(bookID)
+      .subscribe(
+        (data: void) => {
+          let index: number = this.allBooks.findIndex(book => book.bookID === bookID);
+          this.allBooks.splice(index, 1);
+        },
+        (err: any) => console.log(err)
+      );
+  }
 
-  allBooks: Book[];
-  allReaders: Reader[];
-  mostPopularBook: Book;
-
-  constructor(private dataService: DataService,
-    private title: Title) { }
+  deleteReader(readerID: number): void {
+    console.warn(`Delete reader not yet implemented (readerID: ${readerID}).`);
+  }
 
 }
