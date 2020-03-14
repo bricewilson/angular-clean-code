@@ -4,7 +4,7 @@
 
 This repo contains the demo app used in my *Angular Next Steps: Patterns for Clean Code* training from [O'Reilly](https://learning.oreilly.com/live-training/).
 
-After cloning or downloading the code, install all of the required npm packages by running the following command in a terminal windows inside the **booktracker** folder:
+After cloning or downloading the code, install all of the required npm packages by running the following command in a terminal windows inside the **angular-clean-code** folder:
 
 **npm install**
 
